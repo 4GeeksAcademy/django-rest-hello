@@ -11,7 +11,7 @@ $ sudo ln -s /usr/bin/python3 /usr/bin/python
 2) Start a django website
 
 ```sh
-$ django-admin start-project fetes
+$ django-admin startproject fetes
 ```
 
 In django every page of the website is an "app", you should reak your website en very little parts, each part being an "app"
