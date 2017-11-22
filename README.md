@@ -17,16 +17,16 @@ $ sudo pip install django
 3) Start a django website
 
 ```sh
-$ django-admin startproject fetes
+$ django-admin startproject <project-name>
 ```
 In django every page of the website is an "app", you should reak your website en very little parts, each part being an "app"
 
 4) Create your first app
 
 ```sh
-$ python manage.py startapp employees
+$ python manage.py startapp <app1_name>
 ```
-5) Create a urls.py on your employees folder and add the following
+5) Create a urls.py on your <app1_name> folder and add the following
 
 ```py
 from django.conf.urls import url
@@ -37,10 +37,10 @@ urlpatterns = [
 ]
 ```
 
-6) Update the fetes/urls.py to include the employees app
+6) Update the <project-name>/urls.py to include the <app1_name> app
 
 ```python
-#fetes URL Configuration
+#project URL Configuration
 
 from django.conf.urls import include, url
 from django.contrib import admin
@@ -51,7 +51,7 @@ urlpatterns = [
 ]
 ```
 
-7) Create the  index views
+7) Create the index view inside the <app1_name>/view.py file
 
 ```python
 from django.shortcuts import render
