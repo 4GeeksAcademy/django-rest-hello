@@ -67,3 +67,18 @@ def index(request):
 ```sh
 $ python manage.py migrate
 ```
+
+9) Run django on c9 ports by doing 
+
+```sh
+$ python manage.py runserver $IP:$PORT
+```
+
+## Aditional Stuff
+
+To create a user to access the admin
+
+```sh
+$ python manage.py createsuperuser
+```
+And answer the questions that the command line will ask you (username, email & password),
