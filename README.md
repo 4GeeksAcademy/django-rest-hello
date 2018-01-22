@@ -18,67 +18,37 @@ $ sudo pip install django
 
 ```sh
 $ django-admin startproject <project-name>
+& cd <project-name>
 ```
-In django every page of the website is an "app", you should reak your website en very little parts, each part being an "app"
+A django project is divided in one or more apps, that way you can re-use any app on other proyects.
 
 4) Create your first app
 
 ```sh
 $ python manage.py startapp <app1_name>
 ```
-5) Create a urls.py on your <app1_name> folder and add the following
 
-```py
-from django.conf.urls import url
-from . import views
-
-urlpatterns = [
-    url(r'^$', views.index, name='index'),
-]
-```
-
-6) Update the <project-name>/urls.py to include the <app1_name> app
-
-```python
-#project URL Configuration
-
-from django.conf.urls import include, url
-from django.contrib import admin
-
-urlpatterns = [
-    url(r'^<app1_name>/', include('<app1_name>.urls')),
-    url(r'^admin/', admin.site.urls),
-]
-```
-
-7) Create the index view inside the <app1_name>/view.py file
-
-```python
-from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
-def index(request):
-    return HttpResponse('<h1>employees!!!!</h1>')
-```
-
-8) Run the migrations
+5) Run the migrations
 
 ```sh
 $ python manage.py migrate
 ```
 
-9) Run django on c9 ports by doing 
+6) Add your website URL to the ALLOWED_HOSTS on settings.py
+
+```python
+ALLOWED_HOSTS = [
+    'django-example-alesanchezr.c9users.io',
+    ]
+```
+
+
+7) Run django on c9 ports by doing 
 
 ```sh
 $ python manage.py runserver $IP:$PORT
 ```
 
-## Aditional Stuff
+## Aditional Tutorials
 
-To create a user to access the admin
-
-```sh
-$ python manage.py createsuperuser
-```
-And answer the questions that the command line will ask you (username, email & password),
+- [Using the django admin](blob/master/quick_tutorials/ADMIN.md) to create users, etc.
