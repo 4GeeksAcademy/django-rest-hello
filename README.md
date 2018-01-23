@@ -50,9 +50,9 @@ $ python manage.py runserver $IP:$PORT
 ```
 
 ## Aditional Tutorials
-
-- [Create admin users](blob/master/quick_tutorials/ADMIN.md) to create users, etc.
-- [Typical workflow for any API method](blob/master/quick_tutorials/CREATING_API_METHODS.md) to create users, etc.
-- [Working with the database objects](blob/master/quick_tutorials/DATABASE_API.md) to create users, etc.
-- [Working with Migrations](blob/master/quick_tutorials/MIGRATIONS.md) to create users, etc.
-- [Using Mongo](blob/master/quick_tutorials/MONGO.md) to create users, etc.
+/blob/master/quick_tutorials/ADMIN.md
+- [Create admin users](quick_tutorials/ADMIN.md) to create users, etc.
+- [Typical workflow for any API method](quick_tutorials/CREATING_API_METHODS.md) to create users, etc.
+- [Working with the database objects](quick_tutorials/DATABASE_API.md) to create users, etc.
+- [Working with Migrations](quick_tutorials/MIGRATIONS.md) to create users, etc.
+- [Using Mongo](quick_tutorials/MONGO.md) to create users, etc.
