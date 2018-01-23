@@ -51,4 +51,8 @@ $ python manage.py runserver $IP:$PORT
 
 ## Aditional Tutorials
 
-- [Using the django admin](blob/master/quick_tutorials/ADMIN.md) to create users, etc.
+- [Create admin users](blob/master/quick_tutorials/ADMIN.md) to create users, etc.
+- [Typical workflow for any API method](blob/master/quick_tutorials/CREATING_API_METHODS.md) to create users, etc.
+- [Working with the database objects](blob/master/quick_tutorials/DATABASE_API.md) to create users, etc.
+- [Working with Migrations](blob/master/quick_tutorials/MIGRATIONS.md) to create users, etc.
+- [Using Mongo](blob/master/quick_tutorials/MONGO.md) to create users, etc.
