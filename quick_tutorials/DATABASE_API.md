@@ -10,17 +10,17 @@ That will start the python database API
 
 Import the models you want to work with:
 ```
-from employees.models import Employee, Department
+from [your_application_name].models import [Model1], [Model2]
 ```
-Print all departments
+Print all departments (supposing you have a departmen Model)
 ```
 Department.objects.all()
 ```
-Create a department
+Create a department (supposing you have a departmen Model)
 ```
 dep = Department(name='My First Department')
 ```
-Filter
+Filtering departments (supposing you have a departmen Model)
 ```
 Department.objects.filter(id=1)
 Department.objects.filter(name__startswith='Ac')
