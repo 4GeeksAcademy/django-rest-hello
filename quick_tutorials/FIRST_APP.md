@@ -1,37 +1,59 @@
-# Coding your first app
+# Coding a tipical CRUD operation
 
-1) Create a urls.py on your <app1_name> folder and add the following
 
-```py
-from django.conf.urls import url
+1) Update the <app1_name>/urls.py to include your new URL for the particular expected request
+
+```python
+from django.urls import include, path
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    path('games/', views.GamesView.as_view(), name='games'),
 ]
 ```
 
-2) Update the <project-name>/urls.py to include the <app1_name> app
-
+2) Create the serializer that will handle the JSON conversion
 ```python
-#project URL Configuration
+from rest_framework import serializers
+from .models import Game
 
-from django.conf.urls import include, url
-from django.contrib import admin
+class GameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Game
+        fields = ('id','player1','player2','winner')
+```
+3) Create the Model
+```python
+from django.db import models
 
-urlpatterns = [
-    url(r'^<app1_name>/', include('<app1_name>.urls')),
-    url(r'^admin/', admin.site.urls),
-]
+# Create your models here.
+class Game(models.Model):
+    player1 = models.CharField(max_length=20)
+    player2 = models.CharField(max_length=20)
+    winner = models.CharField(max_length=20)
 ```
 
-3) Create the index view inside the <app1_name>/view.py file
+4) Create and execute the migrations
+```
+$ python manage.py makemigrations tictactoeAPI
+
+$ python manage.py migrate
+
+```
+
+5) Create the APIView class inside the <app1_name>/view.py file
 
 ```python
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import Game
+from .serializable import GameSerializer
 
-# Create your views here.
-def index(request):
-    return HttpResponse('<h1>employees!!!!</h1>')
+class GamesView(APIView):
+    def get(self, request):
+        games = Game.objects.all()
+        serializer = GameSerializer(games, many=True)
+        return Response(serializer.data)
 ```
+
+6) Test your call using (Postman)[https://www.getpostman.com/]
