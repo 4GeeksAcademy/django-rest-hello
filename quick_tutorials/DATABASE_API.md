@@ -28,11 +28,13 @@ Department.objects.get(id=1)
 ```
 
 Get relation
-
+```
 dep.employee_set.all()
-
+```
 Set relation
+```
 dep = Department()
 em2.department = dep
 
 dep.employee_set.create() #emproyee parameters
+```
