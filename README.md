@@ -51,7 +51,7 @@ $ python manage.py runserver $IP:$PORT
 
 ## Aditional Tutorials
 /blob/master/quick_tutorials/ADMIN.md
-- [Create admin users](quick_tutorials/ADMIN.md) to create users, etc.
+- [Working with django /admin](quick_tutorials/ADMIN.md) to create superusers, add models to your admin, etc.
 - [Typical workflow for any API method](quick_tutorials/CREATING_API_METHODS.md).
 - [Using the shell](quick_tutorials/DATABASE_API.md) to CRUD models, etc.
 - [Working with Migrations](quick_tutorials/MIGRATIONS.md) for everytime you change your model
