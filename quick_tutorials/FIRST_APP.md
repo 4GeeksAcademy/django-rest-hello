@@ -56,4 +56,4 @@ class GamesView(APIView):
         return Response(serializer.data)
 ```
 
-6) Test your call using (Postman)[https://www.getpostman.com/]
+6) Test your call using [Postman](https://www.getpostman.com/)
