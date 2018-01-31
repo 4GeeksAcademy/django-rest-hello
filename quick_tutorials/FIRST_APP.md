@@ -1,4 +1,4 @@
-# Coding a tipical CRUD operation
+# Coding a typical CRUD operation
 
 
 1) Update the <app1_name>/urls.py to include your new URL for the particular expected request
