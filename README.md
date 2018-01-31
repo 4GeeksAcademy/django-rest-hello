@@ -52,7 +52,7 @@ $ python manage.py runserver $IP:$PORT
 ## Aditional Tutorials
 /blob/master/quick_tutorials/ADMIN.md
 - [Create admin users](quick_tutorials/ADMIN.md) to create users, etc.
-- [Typical workflow for any API method](quick_tutorials/CREATING_API_METHODS.md) to create users, etc.
-- [Working with the database objects](quick_tutorials/DATABASE_API.md) to create users, etc.
-- [Working with Migrations](quick_tutorials/MIGRATIONS.md) to create users, etc.
-- [Using Mongo](quick_tutorials/MONGO.md) to create users, etc.
+- [Typical workflow for any API method](quick_tutorials/CREATING_API_METHODS.md).
+- [Using the shell](quick_tutorials/DATABASE_API.md) to CRUD models, etc.
+- [Working with Migrations](quick_tutorials/MIGRATIONS.md) for everytime you change your model
+- [Using Mongo](quick_tutorials/MONGO.md) insalling and using mongo in your application.
