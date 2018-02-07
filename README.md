@@ -55,4 +55,5 @@ $ python manage.py runserver $IP:$PORT
 - [Typical workflow for any API method](quick_tutorials/FIRST_APP.md).
 - [Using the shell](quick_tutorials/DATABASE_API.md) to CRUD models, etc.
 - [Working with Migrations](quick_tutorials/MIGRATIONS.md) for everytime you change your model
+- [Using MySQL](quick_tutorials/MYSQL.md) insalling and using MySQL in your application.
 - [Using Mongo](quick_tutorials/MONGO.md) insalling and using mongo in your application.
