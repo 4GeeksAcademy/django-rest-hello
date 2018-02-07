@@ -30,4 +30,19 @@ DATABASES = {
 $ python manage.py migrate
 ```
 
+## To install PHPMyAdmin
+
+1) Change apache port to 8081 inside ports.conf
+```
+$ sudo vi /etc/apache2/ports.conf                                                                                           
+```
+2) Change apache port to 8081 inside 001-cloud9.conf
+```
+$ sudo vi /etc/apache2/sites-available/001-cloud9.conf
+```
+3) Restart apache
+```
+$ sudo service apache2 restart
+```
+
 
