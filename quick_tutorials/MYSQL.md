@@ -32,17 +32,25 @@ $ python manage.py migrate
 
 ## To install PHPMyAdmin
 
-1) Change apache port to 8081 inside ports.conf
+1) Run this command in your c9 terminal bash'
+```
+$ phpmyadmin-ctl install
+```
+2) Change apache port to 8081 inside ports.conf
 ```
 $ sudo vi /etc/apache2/ports.conf                                                                                           
 ```
-2) Change apache port to 8081 inside 001-cloud9.conf
+3) Change apache port to 8081 inside 001-cloud9.conf
 ```
 $ sudo vi /etc/apache2/sites-available/001-cloud9.conf
 ```
-3) Restart apache
+4) Restart apache
 ```
 $ sudo service apache2 restart
 ```
+Now you can login into PHPMyAdmin by going to the your website URL using the port 8081 like this:
+
+https://<your_project>-alesanchezr.c9users.io:8081/phpmyadmin
+
 
 
