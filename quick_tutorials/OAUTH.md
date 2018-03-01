@@ -34,3 +34,21 @@ OAUTH2_PROVIDER = {
 4. Import the classes on your views and use them as you wish.
 
 from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
+
+5. Create the app on your django admin
+
+Make sure you set the app token type to 
+
+
+## If you encounter a django.http.request.RawPostDataException
+
+Its because the oAuth framework ads a middleware that checks your Request Body on every request, this will probably fix it.
+
+```
+REST_FRAMEWORK = {
+    ...
+    'FORM_METHOD_OVERRIDE': None,
+    'FORM_CONTENT_OVERRIDE': None,
+    'FORM_CONTENTTYPE_OVERRIDE': None
+    }
+```
