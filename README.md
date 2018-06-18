@@ -51,9 +51,13 @@ $ python manage.py runserver $IP:$PORT
 
 ## Now start adding endpoints to your API using the following workflow: [Typical workflow for any API method](quick_tutorials/FIRST_APP.md).
 
+
+
+
 ### Aditional Tutorials
 - [Working with django /admin](quick_tutorials/ADMIN.md) to create superusers, add models to your admin, etc.
 - [Using the shell](quick_tutorials/DATABASE_API.md) to CRUD models, etc.
 - [Working with Migrations](quick_tutorials/MIGRATIONS.md) for everytime you change your model
 - [Using MySQL](quick_tutorials/MYSQL.md) insalling and using MySQL in your application.
 - [Using Mongo](quick_tutorials/MONGO.md) insalling and using mongo in your application.
+- [Working with OAuth](quick_tutorials/OAUTH.md) implementing OAuth with the JWT Oauth Toolkit.
