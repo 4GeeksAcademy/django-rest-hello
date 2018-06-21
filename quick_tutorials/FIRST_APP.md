@@ -35,7 +35,7 @@ class Game(models.Model):
 
 4) Create and execute the migrations
 ```
-$ python manage.py makemigrations <your-project-name>
+$ python manage.py makemigrations <your-app-name> (not your project name!!!)
 
 $ python manage.py migrate
 
