@@ -18,7 +18,7 @@ $ sudo pip install django
 
 ```sh
 $ django-admin startproject <project-name>
-& cd <project-name>
+$ cd <project-name>
 ```
 A django project is divided in one or more apps, that way you can re-use any app on other proyects.
 
