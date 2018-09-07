@@ -1,7 +1,7 @@
 # Installation
 
 
-1) Change your python version to 3
+1) Change your python version to 3.5
 
 ```sh
 $ sudo mv /usr/bin/python /usr/bin/python2 
