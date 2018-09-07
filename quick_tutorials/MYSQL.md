@@ -30,7 +30,7 @@ DATABASES = {
 $ python manage.py migrate
 ```
 
-## To install PHPMyAdmin
+## To install PHPMyAdmin (only for Cloud 9 users)
 
 1) Run this command in your c9 terminal bash'
 ```
