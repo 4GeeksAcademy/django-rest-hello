@@ -38,7 +38,7 @@ $ python manage.py migrate
 
 ```python
 ALLOWED_HOSTS = [
-    'django-example-alesanchezr.c9users.io',
+    '*',
     ]
 ```
 
