@@ -4,8 +4,8 @@
 1) Change your python version to 3.5
 
 ```sh
-$ sudo mv /usr/bin/python /usr/bin/python2 
-$ sudo ln -s /usr/bin/python3 /usr/bin/python
+$ sudo mv /usr/bin/python3.5 /usr/bin/python3.5 
+$ sudo ln -s /usr/bin/python3.5 /usr/bin/python3.5
 ```
 
 2) Download django
@@ -25,18 +25,18 @@ A django project is divided in one or more apps, that way you can re-use any app
 4) Create your first app
 
 ```sh
-$ python manage.py startapp <app1_name>
+$ python3.5 manage.py startapp <app1_name>
 ```
 
 5) Run the migrations
 
 ```sh
-$ python manage.py migrate
+$ python3.5 manage.py migrate
 ```
 
 6) Add your website URL to the ALLOWED_HOSTS on settings.py
 
-```python
+```python3.5
 ALLOWED_HOSTS = [
     '*',
     ]
@@ -46,7 +46,7 @@ ALLOWED_HOSTS = [
 7) Run django on c9 ports by doing 
 
 ```sh
-$ python manage.py runserver $IP:$PORT
+$ python3.5 manage.py runserver $IP:$PORT
 ```
 
 ## Now start adding endpoints to your API using the following workflow: [Typical workflow for any API method](quick_tutorials/FIRST_APP.md).
