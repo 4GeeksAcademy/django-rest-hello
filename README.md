@@ -3,7 +3,8 @@
 
 1) Make sure you have at least python 3.5 by typing `$ python --version` on the command line.
 
-For c9 users only, you can upgrade your python by typing:
+***Note for cloud 9 users only***  
+You can upgrade your python by typing:
 ```sh
 $ pyenv install 3.5.0    (this will take a while)
 $ pyenv global 3.5.0
