@@ -1,11 +1,12 @@
 # Installation
 
 
-1) Change your python version to 3.5
+1) Make sure you have at least python 3.5 by typing `$ python --version` on the command line.
 
+For c9 users only, you can upgrade your python by typing:
 ```sh
-$ sudo mv /usr/bin/python3.5 /usr/bin/python3.5 
-$ sudo ln -s /usr/bin/python3.5 /usr/bin/python3.5
+$ pyenv install 3.5.0    (this will take a while)
+$ pyenv global 3.5.0
 ```
 
 2) Download django
@@ -25,18 +26,18 @@ A django project is divided in one or more apps, that way you can re-use any app
 4) Create your first app
 
 ```sh
-$ python3.5 manage.py startapp <app1_name>
+$ python manage.py startapp <app1_name>
 ```
 
 5) Run the migrations
 
 ```sh
-$ python3.5 manage.py migrate
+$ python manage.py migrate
 ```
 
 6) Add your website URL to the ALLOWED_HOSTS on settings.py
 
-```python3.5
+```python
 ALLOWED_HOSTS = [
     '*',
     ]
@@ -46,7 +47,7 @@ ALLOWED_HOSTS = [
 7) Run django on c9 ports by doing 
 
 ```sh
-$ python3.5 manage.py runserver $IP:$PORT
+$ python manage.py runserver $IP:$PORT
 ```
 
 ## Now start adding endpoints to your API using the following workflow: [Typical workflow for any API method](quick_tutorials/FIRST_APP.md).
