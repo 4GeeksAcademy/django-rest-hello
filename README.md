@@ -1,60 +1,62 @@
-# Installation
+# Django Starter Template (Python)
 
+django-rest boilerplate for 4Geeks Academy students (ready for deployment on heroku if needed)
 
-1) Make sure you have at least python 3.5 by typing `$ python --version` on the command line.
+## Features
 
-***Note for cloud 9 users only***  
-You can upgrade your python by typing:
+- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
+- Enhancements to Django's static file serving functionality via WhiteNoise.
+- Latest Python 3.6 runtime environment.
+
+## How to Use
+
+To use this project, follow these steps:
+
+1. Mae sure you have python 3.6 installed.
 ```sh
-$ pyenv install 3.5.0    (this will take a while)
-$ pyenv global 3.5.0
+$ pyenv install 3.6.6
+$ pyenv global 3.6.6
+```
+2. Install Django (`$ sudo pip install django`)
+3. Create a new project using this template
+```sh
+$ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/heroku-django-template/archive/master.zip --name=Procfile
 ```
 
-2) Download django
-
+You can replace ``<your_project_name>`` with your desired project name.
+4. Install any defaul packages (similar to `npm install` when using javascript)
 ```sh
-$ sudo pip install django
+$ pypenv install
 ```
 
-3) Start a django website
-
-```sh
-$ django-admin startproject <project-name>
-$ cd <project-name>
-```
-A django project is divided in one or more apps, that way you can re-use any app on other proyects.
-
-4) Create your first app
-
-```sh
-$ python manage.py startapp <app1_name>
-```
-
-5) Run the migrations
+5. Run the migrations
 
 ```sh
 $ python manage.py migrate
 ```
 
-6) Add your website URL to the ALLOWED_HOSTS on settings.py
-
-```python
-ALLOWED_HOSTS = [
-    '*',
-    ]
-```
-
-
-7) Run django on c9 ports by doing 
-
+6. Start the python server
 ```sh
 $ python manage.py runserver $IP:$PORT
 ```
 
-## Now start adding endpoints to your API using the following workflow: [Typical workflow for any API method](quick_tutorials/FIRST_APP.md).
+## What next?
+
+Your python API should be running smoothly.
 
 
+## Deploy your project to Heroku
 
+```sh
+$ git init
+$ git add -A
+$ git commit -m "Initial commit"
+
+$ heroku create
+$ git push heroku master
+
+$ heroku run python manage.py migrate
+```
 
 ### Aditional Tutorials
 - [Working with django /admin](quick_tutorials/ADMIN.md) to create superusers, add models to your admin, etc.
@@ -63,3 +65,7 @@ $ python manage.py runserver $IP:$PORT
 - [Using MySQL](quick_tutorials/MYSQL.md) insalling and using MySQL in your application.
 - [Using Mongo](quick_tutorials/MONGO.md) insalling and using mongo in your application.
 - [Working with OAuth](quick_tutorials/OAUTH.md) implementing OAuth with the JWT Oauth Toolkit.
+
+## Packages Being Used (Documentation)
+- [Django CORS Headers](https://github.com/ottoyiu/django-cors-headers)
+- [Django REST Framework](https://github.com/encode/django-rest-framework)
