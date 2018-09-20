@@ -14,7 +14,7 @@ To use this project, follow these steps:
 
 1. Make sure you have python 3.6 installed, if you are using Cloud 9 you can install it by typing:
 ```sh
-$ pyenv install 3.6.6
+$ pyenv install 3.6.6   (this step takes a while)
 $ pyenv global 3.6.6
 ```
 2. Install Django (`$ sudo pip install django`)
