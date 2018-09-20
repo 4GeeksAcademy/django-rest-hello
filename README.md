@@ -20,7 +20,7 @@ $ pyenv global 3.6.6
 2. Install Django (`$ sudo pip install django`)
 3. Create a new project using this template
 ```sh
-$ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/heroku-django-template/archive/master.zip --name=Procfile
+$ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
 ```
 
 You can replace ``<your_project_name>`` with your desired project name.
