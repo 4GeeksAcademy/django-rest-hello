@@ -18,7 +18,7 @@ $ pyenv install 3.6.6   (this step takes a while)
 $ pyenv global 3.6.6
 ```
 2. Install [Django](https://www.djangoproject.com/) and [pipenv](https://pipenv.readthedocs.io/en/latest/) (`$ sudo pip install django pipenv`)
-3. Make sure your current folder is empty. `$ ls` (if you do ls, it should show nothing)
+3. Make sure your current folder is empty. `$ ls` (if you do `ls`, it should show nothing, no files)
 4. Create a new project using the 4Geeks Academy django-rest-hello template:
 ```sh
 $ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
