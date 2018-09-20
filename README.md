@@ -12,7 +12,7 @@ django-rest boilerplate for 4Geeks Academy students (ready for deployment on her
 
 To use this project, follow these steps:
 
-1. Mae sure you have python 3.6 installed.
+1. Make sure you have python 3.6 installed, if you are using Cloud 9 you can install it by typing:
 ```sh
 $ pyenv install 3.6.6
 $ pyenv global 3.6.6
