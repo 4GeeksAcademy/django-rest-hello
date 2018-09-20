@@ -17,25 +17,26 @@ To use this project, follow these steps:
 $ pyenv install 3.6.6   (this step takes a while)
 $ pyenv global 3.6.6
 ```
-2. Install Django (`$ sudo pip install django`)
-3. Create a new project using this template
+2. Install [Django](https://www.djangoproject.com/) and [pipenv](https://pipenv.readthedocs.io/en/latest/) (`$ sudo pip install django pipenv`)
+3. Make sure your current folder is empty. `$ ls` (if you do ls, it should show nothing)
+4. Create a new project using the 4Geeks Academy django-rest-hello template:
 ```sh
 $ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
 ```
 
 You can replace ``<your_project_name>`` with your desired project name.
-4. Install any defaul packages (similar to `npm install` when using javascript)
+5. Install any defaul packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
 $ pypenv install
+$ pipenv shell
 ```
 
-5. Run the migrations
-
+6. Run the migrations
 ```sh
 $ python manage.py migrate
 ```
 
-6. Start the python server
+7. Start the python server
 ```sh
 $ python manage.py runserver $IP:$PORT
 ```
