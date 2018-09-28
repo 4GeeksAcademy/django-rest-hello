@@ -25,9 +25,9 @@ $ django-admin startproject <your_project_name> . --template=https://github.com/
 ```
 
 You can replace ``<your_project_name>`` with your desired project name.
-5. Install any defaul packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
+5. Install any default packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
-$ pypenv install
+$ pipenv install
 $ pipenv shell
 ```
 
