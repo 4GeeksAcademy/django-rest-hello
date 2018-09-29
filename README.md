@@ -60,12 +60,11 @@ $ heroku run python manage.py migrate
 ```
 
 ### Aditional Tutorials
-- [Working with django /admin](quick_tutorials/ADMIN.md) to create superusers, add models to your admin, etc.
-- [Using the shell](quick_tutorials/DATABASE_API.md) to CRUD models, etc.
-- [Working with Migrations](quick_tutorials/MIGRATIONS.md) for everytime you change your model
-- [Using MySQL](quick_tutorials/MYSQL.md) insalling and using MySQL in your application.
-- [Using Mongo](quick_tutorials/MONGO.md) insalling and using mongo in your application.
-- [Working with OAuth](quick_tutorials/OAUTH.md) implementing OAuth with the JWT Oauth Toolkit.
+- [Working with django /admin](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/ADMIN.md) to create superusers, add models to your admin, etc.
+- [Using the python shell](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/DATABASE_API.md) to CRUD models, etc.
+- [Working with Migrations](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/MIGRATIONS.md) for everytime you change your model
+- [Using MySQL](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/MYSQL.md) insalling and using MySQL in your application.
+- [Using Mongo](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/MONGO.md) insalling and using mongo in your application.
 
 ## Packages Being Used (Documentation)
 - [Django CORS Headers](https://github.com/ottoyiu/django-cors-headers)
