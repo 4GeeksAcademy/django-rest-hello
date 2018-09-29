@@ -52,12 +52,14 @@ Your python API should be running smoothly.
 
 
 ## Deploy your project to Heroku
-
-```sh
+If you don't have your code connected to a github repository, please do it:
+```
 $ git init
 $ git add -A
 $ git commit -m "Initial commit"
-
+```
+Then, run these 3 steps to deploye:
+```sh
 $ heroku create
 $ git push heroku master
 
