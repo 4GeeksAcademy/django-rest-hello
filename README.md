@@ -1,14 +1,14 @@
-# Django Starter Template (Python)
+# API Starter Template (Python & Django REST)
 
 django-rest boilerplate for 4Geeks Academy students (ready for deployment on heroku if needed)
 
 ## Features
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment.
+- It uses the latest python.
+- Ready to deploy to heroku in just 1 minute (for free).
+- 100% compatible with Cloud 9
 
-## How to Use
+## How to Use :question:
 
 To use this project, follow these steps:
 
@@ -18,12 +18,17 @@ $ pyenv install 3.6.6   (this step takes a while)
 $ pyenv global 3.6.6
 ```
 2. Install [Django](https://www.djangoproject.com/) and [pipenv](https://pipenv.readthedocs.io/en/latest/) (`$ sudo pip install django pipenv`)
+
+##### :warning: Only run these steps 3 & 4 if you are the one starting the project from scratch
+
 3. Make sure your current folder is empty. `$ ls` (if you do `ls`, it should show nothing, no files)
 4. Create a new project using the 4Geeks Academy django-rest-hello template:
 ```sh
 $ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
 ```
 Note: You can replace ``<your_project_name>`` with your desired project name.
+
+##### Everyone needs to run these 5,6,7 commands.
 
 5. Install any default packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
