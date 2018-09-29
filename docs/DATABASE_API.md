@@ -10,6 +10,9 @@ Note: That will start the python database API
 ```py
 from <your_application_name>.models import Department
 ```
+
+#### 3) Use normal python to play with the models:
+
 Print all departments (supposing you have a departmen Model)
 ```py
 Department.objects.all()
