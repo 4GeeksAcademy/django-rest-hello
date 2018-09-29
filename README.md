@@ -58,7 +58,7 @@ $ git init
 $ git add -A
 $ git commit -m "Initial commit"
 ```
-Then, run these 3 steps to deploye:
+Then, run these 3 steps to deploy to heroku:
 ```sh
 $ heroku create
 $ git push heroku master
