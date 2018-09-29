@@ -23,8 +23,8 @@ $ pyenv global 3.6.6
 ```sh
 $ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
 ```
-
 You can replace ``<your_project_name>`` with your desired project name.
+
 5. Install any default packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
 $ pipenv install
