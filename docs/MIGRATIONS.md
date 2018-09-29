@@ -2,7 +2,7 @@
 
 To make migrations files depending on your models
 ```
-python manage.py makemigrations employees
+python manage.py makemigrations <app_name>
 ```
 
 To run the actual migrations
