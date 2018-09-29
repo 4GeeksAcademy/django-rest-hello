@@ -8,7 +8,7 @@ django-rest boilerplate for 4Geeks Academy students (ready for deployment on her
 - Ready to deploy to heroku in just 1 minute (for free).
 - 100% compatible with Cloud 9
 
-## How to Use :question:
+## How to install this project :question:
 
 To use this project, follow these steps:
 
