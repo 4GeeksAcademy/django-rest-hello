@@ -28,7 +28,7 @@ $ django-admin startproject <your_project_name> . --template=https://github.com/
 ```
 Note: You can replace ``<your_project_name>`` with your desired project name.
 
-##### Everyone needs to run these 5,6,7 commands.
+##### :warning: Everyone needs to run these 5,6,7 commands.
 
 5. Install any default packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
