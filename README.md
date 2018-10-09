@@ -32,6 +32,7 @@ Note: You can replace ``<your_project_name>`` with your desired project name.
 
 5. Install any default packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
+$ pip install pipenv 
 $ pipenv install
 $ pipenv shell
 ```
