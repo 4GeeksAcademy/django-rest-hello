@@ -1,37 +1,53 @@
-# Django Starter Template (Python)
+# API Starter Template (Python & Django REST)
 
-django-rest boilerplate for 4Geeks Academy students (ready for deployment on heroku if needed)
+A django-rest boilerplate for 4Geeks Academy students. It features ready-for-deployment on heroku instructions.
 
 ## Features
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment.
+- It uses the latest python version (as of Oct 2018).
+- Ready to deploy to heroku in just 1 minute (for free).
+- 100% compatible with [c9.io](http://c9.io) .
 
-## How to Use
+## How to install this project :question:
 
-To use this project, follow these steps:
+Follow these steps:
 
-1. Make sure you have python 3.6 installed, if you are using Cloud 9 you can install it by typing:
+1. Make sure you have python 3.6 installed, if you are using Cloud9 you can install it by typing:
 ```sh
 $ pyenv install 3.6.6   (this step takes a while)
+
 $ pyenv global 3.6.6
 ```
-2. Install [Django](https://www.djangoproject.com/) and [pipenv](https://pipenv.readthedocs.io/en/latest/) (`$ sudo pip install django pipenv`)
-3. Make sure your current folder is empty. `$ ls` (if you do `ls`, it should show nothing, no files)
-4. Create a new project using the 4Geeks Academy django-rest-hello template:
+
+2. Install [Django](https://www.djangoproject.com/) and [pipenv](https://pipenv.readthedocs.io/en/latest/) 
 ```sh
-$ django-admin startproject <your_project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
+$ sudo pip install django pipenv
 ```
 
-You can replace ``<your_project_name>`` with your desired project name.
+##### :warning: Only run these steps 3 & 4 if you are starting the project from scratch
+
+3. Make sure your current folder is empty. 
+```sh
+$ ls
+```
+It should show no files or folders.
+
+4. Create a new project using the 4Geeks Academy django-rest-hello template:
+```sh
+$ django-admin startproject <project_name> . --template=https://github.com/4GeeksAcademy/django-rest-hello/archive/master.zip --name=Procfile
+```
+Note: You can replace ``<project_name>`` with your desired project name.
+
+##### :warning: All team members need to run these 5,6,7 steps.
+
 5. Install any default packages (similar to `npm install` when using javascript) and get inside your recently created python envirnoment
 ```sh
 $ pipenv install
+
 $ pipenv shell
 ```
 
-6. Run the migrations
+6. Run migrations
 ```sh
 $ python manage.py migrate
 ```
@@ -47,12 +63,14 @@ Your python API should be running smoothly.
 
 
 ## Deploy your project to Heroku
-
-```sh
+If you don't have your code connected to a github repository, please do it:
+```
 $ git init
 $ git add -A
 $ git commit -m "Initial commit"
-
+```
+Then, run these 3 steps to deploy to heroku:
+```sh
 $ heroku create
 $ git push heroku master
 
@@ -60,12 +78,11 @@ $ heroku run python manage.py migrate
 ```
 
 ### Aditional Tutorials
-- [Working with django /admin](quick_tutorials/ADMIN.md) to create superusers, add models to your admin, etc.
-- [Using the shell](quick_tutorials/DATABASE_API.md) to CRUD models, etc.
-- [Working with Migrations](quick_tutorials/MIGRATIONS.md) for everytime you change your model
-- [Using MySQL](quick_tutorials/MYSQL.md) insalling and using MySQL in your application.
-- [Using Mongo](quick_tutorials/MONGO.md) insalling and using mongo in your application.
-- [Working with OAuth](quick_tutorials/OAUTH.md) implementing OAuth with the JWT Oauth Toolkit.
+- [Working with django /admin](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/ADMIN.md) to create superusers, add models to your admin, etc.
+- [Using the python shell](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/DATABASE_API.md) to CRUD models, etc.
+- [Working with Migrations](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/MIGRATIONS.md) for everytime you change your model
+- [Using MySQL](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/MYSQL.md) insalling and using MySQL in your application.
+- [Using Mongo](https://github.com/4GeeksAcademy/django-rest-hello/blob/master/docs/MONGO.md) insalling and using mongo in your application.
 
 ## Packages Being Used (Documentation)
 - [Django CORS Headers](https://github.com/ottoyiu/django-cors-headers)

@@ -11,6 +11,7 @@ Now you can login to the /admin
 ## Adding more models to the admin:
 
 Add the following to the employees/admin.py file
-```python
+```py
+from api.models import Employee
 admin.site.register(Employee)
 ```
