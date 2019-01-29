@@ -61,6 +61,111 @@ $ python manage.py runserver $IP:$PORT
 
 Your python API should be running smoothly.
 
+## Installing [drf-yasg](https://drf-yasg.readthedocs.io/en/stable/) (better documentation) for your API (Optional but recommended)
+The API is up and running but it is very complicated to read and use, let's improve that. drf-yasg will use the Django-DRF implementation and generate a descriptive (and awesome) documentation. 
+
+1. Install drf-yasg:
+  ```
+  $ pip install -U drf-yasg
+  ```
+  
+2. In ```settings.py```:
+  ```python
+  INSTALLED_APPS = [
+     ...
+     'drf_yasg',
+     ...
+  ]
+  ```
+  
+3. In ```urls.py```:
+  ```python
+  ...
+  
+  from django.contrib import admin
+  from django.urls import path, include
+  from django.conf.urls import url
+  from rest_framework.documentation import include_docs_urls
+
+  from drf_yasg.views import get_schema_view
+  from drf_yasg import openapi
+
+  schema_view = get_schema_view(
+     openapi.Info(
+        title="Contacts API",
+        default_version='v1',
+        description="Test description",
+        terms_of_service="https://www.google.com/policies/terms/",
+        contact=openapi.Contact(email="contact@snippets.local"),
+        license=openapi.License(name="BSD License"),
+     ),
+     public=True,
+  )
+
+  urlpatterns = [
+      path('admin/', admin.site.urls),
+      path('api/', include('api.urls')),
+      path('', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+  ]
+  ```
+  
+Now check your base url to see your endpoints' documentation.
+
+To expand this information, you can use Comments and Decorators on each method inside ```views.py```. Here's an example code using the Contacts Boilerplate (already installed):
+
+- The Comments after the ```class ContactsView(APIView):``` line are used as descriptions of each method for the entity's endpoint.
+
+- The ```python @swagger_auto_schema( ... )```, is the information expected and the possible responses based on the methods' execution.
+
+```python
+...
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
+
+class ContactsView(APIView):
+  """
+  get:
+  Return a list of all existing contacts
+
+  post:
+  Create a new contact
+  """
+  @swagger_auto_schema(
+      responses={ 
+          status.HTTP_200_OK : ContactSerializer(many=True),
+          status.HTTP_404_NOT_FOUND : openapi.Response(description="No contact"),
+      }
+  )
+  def get(self, request, contact_id=None):
+      ...
+      #this method will return
+      # - 200_OK if contacts found
+      # - 404_BAD_REQUEST if contact not found
+      ...
+      
+      
+  @swagger_auto_schema(
+      request_body=ContactSerializer,
+      responses={ 
+          status.HTTP_200_OK : ContactSerializer,
+          status.HTTP_400_BAD_REQUEST: openapi.Response(description="Missing information")
+      }
+  )
+  def post(self, request):
+      ...
+      #this method will return 
+      # - 200_OK if information in request is valid 
+      # - 404_BAD_REQUEST otherwise.
+      ...
+   ...
+
+```
+
+Documentation with swag!
+
+
+
+
 
 ## Deploy your project to Heroku
 If you don't have your code connected to a github repository, please do it:
