@@ -64,10 +64,11 @@ Your python API should be running smoothly.
 ## Installing [drf-yasg](https://drf-yasg.readthedocs.io/en/stable/) (better documentation) for your API (Optional but recommended)
 The API is up and running but it is very complicated to read and use, let's improve that. drf-yasg will use the Django-DRF implementation and generate a descriptive (and awesome) documentation. 
 
-1. Install drf-yasg:
+1. Install drf-yasg, make sure you are running the environment ( ```pipenv shell``` ):
   ```
-  $ pip install -U drf-yasg
+  $ pipenv install drf-yasg
   ```
+  Note: if you get "permission" errors, use ```sudo pipenv install drf-yasg``` instead.
   
 2. In ```settings.py```:
   ```python
