@@ -30,6 +30,13 @@ DATABASES = {
 $ python manage.py migrate
 ```
 
+Note- if you receive an error during migration, you may need to include this in your settings.py to account for date/time fields:
+
+```
+from django.db.backends.mysql.base import DatabaseWrapper
+DatabaseWrapper.data_types['DateTimeField'] = 'datetime'
+```
+
 ## To install PHPMyAdmin (only for Cloud 9 users)
 
 1) Run this command in your c9 terminal bash'
