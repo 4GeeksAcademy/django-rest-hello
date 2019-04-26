@@ -1,6 +1,6 @@
 ports:
     - port: 3000
-task:
+tasks:
     - command: >
         pipenv shell &&
         export IP=0.0.0.0 &&
