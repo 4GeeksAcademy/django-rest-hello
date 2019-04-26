@@ -12,5 +12,6 @@ django-heroku = "*"
 gunicorn = "*"
 django-cors-headers = "*"
 djangorestframework = "*"
+django-generate-secret-key = "*"
 
 [dev-packages]
