@@ -21,6 +21,7 @@ Please copy the collowing key and paste it as the SECRET_KEY variable value on t
 Afterwards you need to run the following commands to start coding:
 
 - \033[94m$ pipenv shell\033[0m initiate the environtment
+- \033[94m$ pipenv install\033[0m initiate install the missing packages
 - \033[94m$ python manage.py migrate\033[0m run migrations (if pending)
 - \033[94m$ python manage.py runserver $IP:$PORT\033[0m start django
 
