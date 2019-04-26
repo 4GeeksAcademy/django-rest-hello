@@ -4,5 +4,4 @@ tasks:
     - command: >
         export IP=0.0.0.0 &&
         export PORT=3000 &&
-        pipenv install &&
         python welcome.py
