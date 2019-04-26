@@ -2,7 +2,7 @@ ports:
     - port: 3000
 tasks:
     - command: >
-        pipenv shell &&
         export IP=0.0.0.0 &&
         export PORT=3000 &&
-        python secret.py
+        pipenv install &&
+        python welcome.py
