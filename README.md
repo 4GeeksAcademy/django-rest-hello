@@ -2,11 +2,12 @@
 
 A django-rest boilerplate for 4Geeks Academy students. It features ready-for-deployment on heroku instructions.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/4GeeksAcademy/django-rest-hello.git)
+
 ## Features
 
-- It uses the latest python version (as of Oct 2018).
 - Ready to deploy to heroku in just 1 minute (for free).
-- 100% compatible with [c9.io](http://c9.io) .
+- 100% compatible with gitpod.
 
 ## How to install this project :question:
 
