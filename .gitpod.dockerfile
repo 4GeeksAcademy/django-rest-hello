@@ -1,3 +1,4 @@
+FROM gitpod/workspace-full
 # Install image generator
 USER root
 RUN apt-get update && apt-get install graphviz libgraphviz-dev pkg-config
