@@ -12,5 +12,11 @@ django-heroku = "*"
 gunicorn = "*"
 django-cors-headers = "*"
 djangorestframework = "*"
+django-extensions = "*"
+pygraphviz = "*"
 
 [dev-packages]
+
+[scripts]
+migrate= "python manage.py migrate"
+start= "python manage.py runserver $IP:$PORT"

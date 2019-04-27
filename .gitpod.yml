@@ -1,7 +1,9 @@
 ports:
     - port: 3000
+      onOpen: open-preview
 tasks:
-    - command: >
-        export IP=0.0.0.0 &&
-        export PORT=3000 &&
+    - init: pipenv install
+      command: >
+        pipenv run migrate
+        pipenv run start
         python3 welcome.py
