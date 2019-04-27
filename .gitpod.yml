@@ -4,8 +4,8 @@ ports:
     - port: 3000
       onOpen: open-preview
 tasks:
-    - command: python3 welcome.py
     - init: pipenv install
       command: >
         pipenv run migrate;
         pipenv run start;
+    - command: python3 welcome.py
