@@ -6,6 +6,6 @@ ports:
 tasks:
     - init: pipenv install
       command: >
-        pipenv run migrate
-        pipenv run start
-        python3 welcome.py
+        pipenv run migrate;
+        pipenv run start;
+        python3 welcome.py;
