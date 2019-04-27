@@ -13,7 +13,7 @@ gunicorn = "*"
 django-cors-headers = "*"
 djangorestframework = "*"
 django-extensions = "*"
-pygraphviz = "*"
+# pygraphviz = "*"
 
 [dev-packages]
 
