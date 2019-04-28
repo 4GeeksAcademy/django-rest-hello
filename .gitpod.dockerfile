@@ -5,3 +5,4 @@ RUN apt-get update && apt-get install -y graphviz libgraphviz-dev pkg-config pyt
 
 ENV IP=0.0.0.0
 ENV PORT=3000
+ENV PIPENV_VENV_IN_PROJECT=true
