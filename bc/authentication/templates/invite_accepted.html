@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+  <!-- HEADING -->
+  <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td height="35"></td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td valign="top" align="center" class="specbundle">
+                    <div class="contentEditableContainer contentTextEditable">
+                      <div class="contentEditable">
+                        <p style='text-align:center;margin:0;font-family:Georgia,Time,sans-serif;font-size:26px;color:#222222;'>
+                          <span class="specbundle2">
+                            <span class="font1">Someone you invited has joined&nbsp;</span>
+                          </span>
+                          <span style="color:#27666F;" class="font"> {{ COMPANY_NAME }}</span>
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- SEPARATOR -->
+  <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td height="35"></td>
+        </tr>
+    </table>
+  </div>
+  <!-- MESSAGE CONTENT -->
+  <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td align='left'>
+            <div class="contentEditableContainer contentTextEditable">
+              <div class="contentEditable" align='center'>
+                <p><span class="fuchsia">{{ TALENT }}</span> just joined JobCore prior your invitation, you can find him on the Talent Search section now.</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr><td height='55'></td></tr>
+        <tr>
+          <td align='center'>
+            <table>
+              <tr>
+                <td align='center' bgcolor='#27666F' style='background:#27666F; padding:15px 18px;-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;'>
+                  <div class="contentEditableContainer contentTextEditable">
+                    <div class="contentEditable" align='center'>
+                      <a target='_blank' href='{{ LINK }}' class='link2' style='color:#ffffff;'>Review it in JobCore</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr><td height='20'></td></tr>
+      </table>
+    </div>
+{% endblock %}

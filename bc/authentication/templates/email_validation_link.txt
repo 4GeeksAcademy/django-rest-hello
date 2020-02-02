@@ -1,0 +1,6 @@
+We need to validate your email to complete your profile.
+
+Click or copy the following link on your browser:
+{{ LINK }} 
+
+The JobCore Team

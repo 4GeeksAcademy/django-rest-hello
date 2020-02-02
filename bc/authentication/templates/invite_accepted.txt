@@ -1,0 +1,7 @@
+Great news!
+
+{{ TALENT }} just joined JobCore prior your invitation, you can find him on the Talent Search section now.
+
+{{ LINK }} 
+
+The JobCore Team

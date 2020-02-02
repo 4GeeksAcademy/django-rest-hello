@@ -1,0 +1,6 @@
+Welcome to JobCore!
+
+We are very happy to have you, please click on the following link to validate your email and start receiving job notifications:
+{{ LINK }} 
+
+The JobCore Team
