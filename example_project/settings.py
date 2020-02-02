@@ -1,4 +1,7 @@
 """
+Django settings for example_project project on Heroku. For more info, see:
+https://github.com/4GeeksAcademy/django-rest-hello
+
 For more information on this file, see
 https://docs.djangoproject.com/en/2.0/topics/settings/
 
@@ -6,7 +9,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os, datetime, dj_database_url, django_heroku
+import os
+import dj_database_url
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,9 +26,6 @@ SECRET_KEY = "replace_me"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-# Reimplementing the django user
-AUTH_USER_MODEL = 'authentication.User'
 
 # Application definition
 
@@ -41,7 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'django_extensions',
-    'bc.authentication',
+    'rest_framework_swagger',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'breathecode.urls'
+ROOT_URLCONF = 'example_project.urls'
 
 TEMPLATES = [
     {
@@ -75,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'breathecode.wsgi.application'
+WSGI_APPLICATION = 'example_project.wsgi.application'
 
 
 # Database
@@ -131,33 +134,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
-
-JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=9999),  # original: 900
-    'JWT_ALLOW_REFRESH': True,
-    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=30),
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'bc.authentication.utils.jwt_response_payload_handler',
-}
-
-REST_FRAMEWORK = {
-    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_PAGINATION_CLASS': 'bc.utils.pagination.HeaderLimitOffsetPagination',
-    'PAGE_SIZE': 50,
-    'EXCEPTION_HANDLER': 'bc.utils.validators.post_exception_handler',
-}
-
-BREATHECODE_SETTINGS = {
-    'EMAIL_NOTIFICATIONS': True,
-
-}
 
 CORS_ORIGIN_ALLOW_ALL = True
 

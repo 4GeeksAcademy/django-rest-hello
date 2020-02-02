@@ -1,5 +1,5 @@
 """
-breathecode URL Configuration
+example_project URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='API Boilerplate - 4Geeks Academy')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/auth/', include('bc.authentication.urls')),
-    # path('api/jobs/', include('api.jobs.urls')),
-    # path('api/academy/', include('api.academy.urls')),
+    path('api/', include('api.urls')),
+    url(r'^$', schema_view)
 ]
